@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import bakingImg from "../../assets/baking.png";
 import partyImg from "../../assets/party.png";
 import wave from "../../assets/wave.png";
+import { signInWithGoogle } from "../../firebase/firebase.utils";
 import GoogleButton from "react-google-button";
 import "./Signup.scss";
 
@@ -35,7 +36,10 @@ const Signup = () => {
 
   return (
     <div className="Signup">
-      <div className="container" id="container">
+      <div
+        className="container animate__animated animate__fadeInUp"
+        id="container"
+      >
         <div className="form-container sign-up-container">
           <form action="#">
             <h1>Create Account</h1>
@@ -51,7 +55,10 @@ const Signup = () => {
           <form action="#">
             <h1>Sign in</h1>
             <div className="social-container">
-              <GoogleButton className="google-button" />
+              <GoogleButton
+                onClick={signInWithGoogle}
+                className="google-button"
+              />
             </div>
             <span>or use your account</span>
             <input onChange={onChange} type="email" placeholder="Email" />

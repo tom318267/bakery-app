@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import cupcake from "../../assets/cupcake.png";
+import { auth } from "../../firebase/firebase.utils";
 import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({ currentUser }) => {
   return (
     <div className="Navbar">
       <nav>
@@ -25,7 +26,11 @@ const Navbar = () => {
               <a href="collapsible.html">Contact</a>
             </li>
             <li>
-              <Link to="/sign-up">Sign Up</Link>
+              {currentUser ? (
+                <Link onClick={() => auth.signOut()}>Sign Out</Link>
+              ) : (
+                <Link to="/sign-up">Sign Up</Link>
+              )}
             </li>
           </ul>
         </div>
