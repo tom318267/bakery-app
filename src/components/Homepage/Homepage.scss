@@ -1,0 +1,68 @@
+.HomePage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f99898;
+  overflow: hidden;
+
+  .home-container {
+    position: relative;
+    bottom: 38px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 400px;
+    height: 237px;
+    left: 10%;
+    top: 207px;
+    font-size: 5rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.44);
+  }
+
+  h2 {
+    position: absolute;
+    width: 244px;
+    height: 86px;
+    left: 10%;
+    top: 393px;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+  }
+
+  button {
+    position: absolute;
+    width: 210px;
+    height: 64px;
+    left: 10%;
+    top: 540px;
+    background: #68e1fd;
+    border: none;
+    font-size: 1.3rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 29px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+  }
+
+  img {
+    position: absolute;
+    width: 568px;
+    height: 428px;
+    left: 40%;
+    top: 167px;
+  }
+
+  #wave {
+    position: absolute;
+    width: 100vw;
+    height: 320px;
+    left: 0;
+    top: 590px;
+  }
+}

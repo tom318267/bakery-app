@@ -1,0 +1,32 @@
+.CollectionItem {
+  .image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+
+  .collection-footer {
+    display: flex;
+    justify-content: space-between;
+    .name,
+    .price {
+      font-size: 1.3rem;
+    }
+
+    .name {
+      width: 90%;
+    }
+
+    .price {
+      width: 10%;
+      text-align: right;
+    }
+  }
+}
