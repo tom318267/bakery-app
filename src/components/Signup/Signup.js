@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import bakingImg from "../../assets/baking.png";
 import partyImg from "../../assets/party.png";
 import wave from "../../assets/wave.png";
-import { signInWithGoogle } from "../../firebase/firebase.utils";
+import {
+  auth,
+  signInWithGoogle,
+  createUserProfileDocument,
+} from "../../firebase/firebase.utils";
 import GoogleButton from "react-google-button";
 import "./Signup.scss";
 
@@ -17,11 +21,38 @@ const Signup = () => {
 
   const onChange = (e) => {
     setForm({
-      displayName: e.target.value,
-      email: e.target.value,
-      password: e.target.value,
-      confirmPassword: e.target.value,
+      ...form,
+      [e.target.name]: e.target.value,
     });
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const { displayName, email, password, confirmPassword } = form;
+
+    if (password !== confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    }
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      await createUserProfileDocument(user, { displayName });
+
+      setForm({
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const container = document.getElementById("container");
@@ -34,6 +65,8 @@ const Signup = () => {
     container.classList.remove("right-panel-active");
   };
 
+  const { displayName, email, password, confirmPassword } = form;
+
   return (
     <div className="Signup">
       <div
@@ -41,13 +74,41 @@ const Signup = () => {
         id="container"
       >
         <div className="form-container sign-up-container">
-          <form action="#">
+          <form onSubmit={onSubmit}>
             <h1>Create Account</h1>
             <span>or use your email for registration</span>
-            <input onChange={onChange} type="text" placeholder="Display Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
+            <input
+              onChange={onChange}
+              type="text"
+              name="displayName"
+              placeholder="Display Name"
+              value={displayName}
+              required
+            />
+            <input
+              onChange={onChange}
+              name="email"
+              type="email"
+              placeholder="Email"
+              value={email}
+              required
+            />
+            <input
+              onChange={onChange}
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              required
+            />
+            <input
+              onChange={onChange}
+              type="password"
+              placeholder="Confirm Password"
+              name="confirmPassword"
+              value={confirmPassword}
+              required
+            />
             <button>Sign Up</button>
           </form>
         </div>
@@ -61,8 +122,20 @@ const Signup = () => {
               />
             </div>
             <span>or use your account</span>
-            <input onChange={onChange} type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input
+              onChange={onChange}
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={email}
+            />
+            <input
+              onChange={onChange}
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+            />
             <Link className="forgot" href="#">
               Forgot your password?
             </Link>
