@@ -26,7 +26,7 @@ const Signup = () => {
     });
   };
 
-  const onSubmit = async (e) => {
+  const onSignUpSubmit = async (e) => {
     e.preventDefault();
 
     const { displayName, email, password, confirmPassword } = form;
@@ -55,6 +55,22 @@ const Signup = () => {
     }
   };
 
+  const onSignInSubmit = async (e) => {
+    e.preventDefault();
+
+    const { email, password } = form;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      setForm({
+        email: "",
+        password: "",
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const container = document.getElementById("container");
 
   const signUp = () => {
@@ -74,7 +90,7 @@ const Signup = () => {
         id="container"
       >
         <div className="form-container sign-up-container">
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSignUpSubmit}>
             <h1>Create Account</h1>
             <span>or use your email for registration</span>
             <input
@@ -113,7 +129,7 @@ const Signup = () => {
           </form>
         </div>
         <div className="form-container sign-in-container">
-          <form action="#">
+          <form onSubmit={onSignInSubmit}>
             <h1>Sign in</h1>
             <div className="social-container">
               <GoogleButton
