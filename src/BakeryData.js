@@ -51,28 +51,28 @@ const BAKERY_DATA = [
     routeName: "chefs_choice",
     items: [
       {
-        id: 1,
+        id: 6,
         name: "Chocolate Cake",
         imageUrl:
           "https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 15,
       },
       {
-        id: 2,
+        id: 7,
         name: "Layer Cake",
         imageUrl:
           "https://images.pexels.com/photos/4553366/pexels-photo-4553366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 20,
       },
       {
-        id: 3,
+        id: 8,
         name: "Cheesecake",
         imageUrl:
           "https://images.pexels.com/photos/14107/pexels-photo-14107.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 18,
       },
       {
-        id: 4,
+        id: 9,
         name: "Apple Pie",
         imageUrl:
           "https://images.pexels.com/photos/6163263/pexels-photo-6163263.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -87,28 +87,28 @@ const BAKERY_DATA = [
     routeName: "holiday_treats",
     items: [
       {
-        id: 1,
+        id: 10,
         name: "Christmas Cookies",
         imageUrl:
           "https://images.pexels.com/photos/5618032/pexels-photo-5618032.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 10,
       },
       {
-        id: 2,
+        id: 11,
         name: "Heartbaked Cookies",
         imageUrl:
           "https://images.pexels.com/photos/3553702/pexels-photo-3553702.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 12,
       },
       {
-        id: 3,
+        id: 12,
         name: "Easter Cake",
         imageUrl:
           "https://images.pexels.com/photos/3992134/pexels-photo-3992134.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 15,
       },
       {
-        id: 4,
+        id: 13,
         name: "St. Patricks Day Cookies",
         imageUrl:
           "https://images.pexels.com/photos/3860487/pexels-photo-3860487.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
