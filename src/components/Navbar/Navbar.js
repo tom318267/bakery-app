@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import cupcake from "../../assets/cupcake.png";
 import { auth } from "../../firebase/firebase.utils";
+import { connect } from "react-redux";
 import "./Navbar.scss";
 
 const Navbar = ({ currentUser }) => {
@@ -54,4 +55,8 @@ const Navbar = ({ currentUser }) => {
   );
 };
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Navbar);
