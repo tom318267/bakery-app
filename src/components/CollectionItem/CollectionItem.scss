@@ -1,4 +1,16 @@
 .CollectionItem {
+  position: relative;
+
+  &:hover {
+    .image {
+      opacity: 0.9;
+    }
+    .addButton {
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
   .image {
     position: relative;
     width: 100%;
@@ -27,6 +39,26 @@
     .price {
       width: 10%;
       text-align: right;
+    }
+  }
+
+  .addButton {
+    display: none;
+    position: absolute;
+    width: 80%;
+    top: 238px;
+    left: 22px;
+    background-color: #f99898;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+    font-size: 1.1rem;
+
+    &:hover {
+      background-color: #ff7b7b;
+      opacity: 1;
     }
   }
 }
