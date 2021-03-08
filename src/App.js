@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Homepage from "./components/Homepage/Homepage";
 import Navbar from "./components/Navbar/Navbar";
 import BakeryItems from "./components/BakeryItems/BakeryItems";
@@ -41,7 +46,13 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/items" component={BakeryItems} />
-            <Route exact path="/sign-up" component={Signup} />
+            <Route
+              exact
+              path="/sign-up"
+              render={() =>
+                this.props.currentUser ? <Redirect to="/" /> : <Signup />
+              }
+            />
           </Switch>
         </Router>
       </div>
@@ -49,4 +60,8 @@ class App extends React.Component {
   }
 }
 
-export default connect(null, { setCurrentUser })(App);
+const mapStateToProps = ({ user }) => ({
+  currentUser: user.currentUser,
+});
+
+export default connect(mapStateToProps, { setCurrentUser })(App);
