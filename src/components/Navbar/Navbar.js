@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import cupcake from "../../assets/cupcake.png";
+import CartIcon from "../CartIcon/CartIcon";
+import CartDropdown from "../CartDropdown/CartDropdown";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
 import "./Navbar.scss";
 
-const Navbar = ({ currentUser }) => {
+const Navbar = ({ currentUser, hidden }) => {
   return (
     <div className="Navbar">
       <nav>
@@ -33,8 +35,11 @@ const Navbar = ({ currentUser }) => {
                 <Link to="/sign-up">Sign Up</Link>
               )}
             </li>
+
+            <CartIcon />
           </ul>
         </div>
+        {hidden ? null : <CartDropdown />}
       </nav>
 
       <ul className="sidenav" id="mobile-demo">
@@ -55,8 +60,9 @@ const Navbar = ({ currentUser }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser: currentUser,
+  hidden,
 });
 
 export default connect(mapStateToProps)(Navbar);
