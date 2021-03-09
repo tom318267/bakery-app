@@ -1,0 +1,24 @@
+.CartItem {
+  width: 100%;
+  display: flex;
+  min-height: 80px;
+  margin-bottom: 15px;
+
+  img {
+    width: 20%;
+  }
+
+  .item-details {
+    width: 80%;
+    display: block;
+    color: black;
+    padding-right: 20px;
+    margin: auto 0;
+  }
+
+  .name,
+  .price {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+}
