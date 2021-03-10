@@ -3,13 +3,14 @@
   display: flex;
   min-height: 80px;
   margin-bottom: 15px;
+  font-family: "Lato", sans-serif;
 
   img {
-    width: 20%;
+    width: 30%;
   }
 
   .item-details {
-    width: 80%;
+    width: 70%;
     display: block;
     color: black;
     padding-right: 20px;
@@ -18,7 +19,7 @@
 
   .name,
   .price {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-left: 10px;
   }
 }

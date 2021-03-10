@@ -17,6 +17,13 @@
     height: auto;
     overflow: scroll;
     margin-bottom: 20px;
+
+    .empty-message {
+      font-size: 1.5rem;
+      margin: 50px auto;
+      color: black;
+      font-family: "Lato", sans-serif;
+    }
   }
 
   button {
