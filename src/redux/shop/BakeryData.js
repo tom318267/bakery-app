@@ -22,21 +22,13 @@ const BAKERY_DATA = [
 
       {
         id: 3,
-        name: "Chocolate Brownies",
-        imageUrl:
-          "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        price: 12,
-      },
-
-      {
-        id: 4,
         name: "Chocolate Mousse",
         imageUrl:
           "https://images.pexels.com/photos/3026810/pexels-photo-3026810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 10,
       },
       {
-        id: 5,
+        id: 4,
         name: "Rainbow Donuts",
         imageUrl:
           "https://images.pexels.com/photos/1191639/pexels-photo-1191639.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -109,7 +101,7 @@ const BAKERY_DATA = [
       },
       {
         id: 13,
-        name: "St. Patricks Day Cookies",
+        name: "St. Pattys Day Cookies",
         imageUrl:
           "https://images.pexels.com/photos/3860487/pexels-photo-3860487.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 10,

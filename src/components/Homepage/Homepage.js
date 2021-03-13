@@ -10,8 +10,8 @@ const Homepage = () => {
       <div className="home-container animate__animated animate__jackInTheBox">
         <h1>Kristen's Bakery</h1>
         <h2>Freshly baked all day. Everyday!</h2>
-        <Link to="/items">
-          <button>Our Menu</button>
+        <Link to="/sign-up">
+          <button>Get Started</button>
         </Link>
         <img src={dessertLogo} alt="dessert" />
       </div>

@@ -6,7 +6,7 @@
   font-family: "Lato", sans-serif;
 
   img {
-    width: 30%;
+    width: 27%;
   }
 
   .item-details {
@@ -15,11 +15,26 @@
     color: black;
     padding-right: 20px;
     margin: auto 0;
+
+    .remove-from-cart {
+      cursor: pointer;
+      display: inline-flex;
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .name {
+    margin-left: 5px;
+  }
+
+  .price {
+    margin-right: 8px;
   }
 
   .name,
   .price {
     font-size: 0.8rem;
-    margin-left: 10px;
   }
 }
