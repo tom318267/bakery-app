@@ -18,7 +18,7 @@ const Navbar = ({ currentUser, hidden }) => {
           <Link to="/" className="cupcake-nav">
             <img src={cupcake} alt="cupcake" />
           </Link>
-          <Link to="!#" className="brand-logo">
+          <Link className="brand-logo">
             <CartIcon className="mobile-cart" />
           </Link>
           <Link href="#" data-target="mobile-demo" className="sidenav-trigger">
