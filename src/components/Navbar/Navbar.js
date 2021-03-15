@@ -15,8 +15,11 @@ const Navbar = ({ currentUser, hidden }) => {
     <div className="Navbar">
       <nav>
         <div className="nav-wrapper">
-          <Link to="/" className="brand-logo">
+          <Link to="/" className="cupcake-nav">
             <img src={cupcake} alt="cupcake" />
+          </Link>
+          <Link to="!#" className="brand-logo">
+            <CartIcon className="mobile-cart" />
           </Link>
           <Link href="#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
@@ -35,7 +38,7 @@ const Navbar = ({ currentUser, hidden }) => {
               {currentUser ? (
                 <Link onClick={() => auth.signOut()}>Sign Out</Link>
               ) : (
-                <Link to="/sign-up">Sign Up</Link>
+                <Link to="/sign-in">Sign In</Link>
               )}
             </li>
 
@@ -47,16 +50,16 @@ const Navbar = ({ currentUser, hidden }) => {
 
       <ul className="sidenav" id="mobile-demo">
         <li>
-          <a href="sass.html">Sass</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="badges.html">Components</a>
+          <Link to="/items">Menu</Link>
         </li>
         <li>
-          <a href="collapsible.html">Javascript</a>
+          <Link href="collapsible.html">Contact</Link>
         </li>
         <li>
-          <a href="mobile.html">Mobile</a>
+          <Link to="/sign-in">Sign In</Link>
         </li>
       </ul>
     </div>

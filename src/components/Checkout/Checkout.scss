@@ -15,6 +15,10 @@
     justify-content: space-between;
     border-bottom: 1px solid black;
 
+    @media screen and (max-width: 425px) {
+      font-size: 1rem;
+    }
+
     .header-block {
       text-transform: capitalize;
       width: 23%;
@@ -39,7 +43,7 @@
 
     @media screen and (max-width: 425px) {
       font-size: 1.3rem;
-      margin: 30px auto;
+      margin: 30px auto 10px auto;
     }
   }
 
@@ -47,5 +51,11 @@
     margin: 40px 0;
     font-size: 1.5rem;
     color: red;
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.3rem;
+      margin: 0 0 10px 0;
+      text-align: center;
+    }
   }
 }

@@ -71,13 +71,13 @@ const Signup = () => {
     }
   };
 
-  const container = document.getElementById("container");
-
   const signUp = () => {
+    const container = document.getElementById("container");
     container.classList.add("right-panel-active");
   };
 
   const signIn = () => {
+    const container = document.getElementById("container");
     container.classList.remove("right-panel-active");
   };
 
