@@ -9,16 +9,10 @@ const CartItem = ({ item, clearItemFromCart }) => {
     <div className="CartItem">
       <img src={imageUrl} alt="item" />
       <div className="item-details">
-        <span className="name">{name} -</span>
+        <span className="name">{name}</span>
         <span className="price">
           {quantity} x ${price}
         </span>
-        <div
-          className="remove-from-cart"
-          onClick={() => clearItemFromCart(item)}
-        >
-          <i className="fas fa-trash"></i>
-        </div>
       </div>
     </div>
   );

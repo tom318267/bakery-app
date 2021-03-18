@@ -7,7 +7,7 @@ import { createStructuredSelector } from "reselect";
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import "./CartDropdown.scss";
 
-const CartDropdown = ({ cartItems, history, dispatch }) => {
+const CartDropdown = ({ cartItems, history, toggleCartHidden }) => {
   return (
     <div className="CartDropdown">
       <div className="cart-items">
@@ -20,12 +20,13 @@ const CartDropdown = ({ cartItems, history, dispatch }) => {
         )}
       </div>
       <button
+        className="checkout-button"
         onClick={() => {
           history.push("/checkout");
-          dispatch(toggleCartHidden());
+          toggleCartHidden();
         }}
       >
-        Checkout
+        GO TO CHECKOUT
       </button>
     </div>
   );
@@ -35,4 +36,6 @@ const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems,
 });
 
-export default withRouter(connect(mapStateToProps)(CartDropdown));
+export default withRouter(
+  connect(mapStateToProps, { toggleCartHidden })(CartDropdown)
+);
