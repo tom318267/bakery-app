@@ -1,5 +1,5 @@
-const BAKERY_DATA = [
-  {
+const BAKERY_DATA = {
+  favorites: {
     id: 1,
     title: "Favorites",
     routeName: "favorites",
@@ -37,7 +37,7 @@ const BAKERY_DATA = [
     ],
   },
 
-  {
+  chefs_choice: {
     id: 2,
     title: "Chef's Choice",
     routeName: "chefs_choice",
@@ -73,7 +73,7 @@ const BAKERY_DATA = [
     ],
   },
 
-  {
+  holiday_treats: {
     id: 3,
     title: "Holiday Treats",
     routeName: "holiday_treats",
@@ -108,6 +108,6 @@ const BAKERY_DATA = [
       },
     ],
   },
-];
+};
 
 export default BAKERY_DATA;
