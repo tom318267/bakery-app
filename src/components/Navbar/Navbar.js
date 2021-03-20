@@ -32,7 +32,7 @@ const Navbar = ({ currentUser, hidden }) => {
               <Link to="/items">Menu</Link>
             </li>
             <li>
-              <a href="collapsible.html">Contact</a>
+              <Link href="collapsible.html">Contact</Link>
             </li>
             <li>
               {currentUser ? (

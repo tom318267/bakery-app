@@ -1,4 +1,10 @@
 .Navbar {
+  font-family: "Lato", sans-serif;
+
+  nav {
+    background-color: #fd7c7e;
+    box-shadow: none;
+  }
   .nav-wrapper {
     .sidenav-trigger {
       text-decoration: none;
@@ -38,45 +44,52 @@
     .material-icons {
       color: white;
     }
-  }
 
-  li {
-    a {
-      text-decoration: none;
-      position: relative;
-      font-family: "Lato", sans-serif;
-      font-size: 1.3rem;
-      margin-right: 10px;
-      color: white;
+    li {
+      a {
+        text-decoration: none;
+        position: relative;
+        font-family: "Lato", sans-serif;
+        font-size: 1.3rem;
+        margin-right: 10px;
+        color: white;
 
-      &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 13px;
-        left: 0;
-        background-color: white;
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all 0.2s ease-in-out 0s;
-      }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0) !important;
+        }
 
-      &:hover:before {
-        visibility: visible;
-        transform: scaleX(1);
-      }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 12px;
+          left: 0;
+          background-color: white;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.2s ease-in-out 0s;
+        }
 
-      &:hover {
-        background-color: rgba(0, 0, 0, 0) !important;
+        &:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
       }
     }
   }
 
   .sidenav {
+    background-color: #f99898;
     li {
       a {
-        color: #f99898;
+        color: white;
+        text-decoration: none;
+        font-size: 1.3rem;
+
+        &:hover {
+          background-color: #fd7c7e;
+        }
       }
     }
   }

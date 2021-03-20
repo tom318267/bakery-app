@@ -10,14 +10,16 @@
   top: 90px;
   right: 40px;
   z-index: 5;
+  font-family: "Lato", sans-serif;
 
   .empty-message {
     font-size: 18px;
     margin: 50px auto;
+    color: black;
   }
 
   .cart-items {
-    height: 240px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     overflow: scroll;
@@ -25,8 +27,9 @@
 
   .checkout-button {
     margin-top: auto;
-    background-color: black;
+    background-color: #68e1fd;
     border: none;
-    color: white;
+    font-size: 1.1rem;
+    color: black;
   }
 }

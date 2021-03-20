@@ -6,7 +6,7 @@ const BAKERY_DATA = [
     items: [
       {
         id: 1,
-        name: "Chocolate Chip Cookies",
+        name: "Cookies",
         imageUrl:
           "https://images.pexels.com/photos/890577/pexels-photo-890577.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
         price: 8,
@@ -22,7 +22,7 @@ const BAKERY_DATA = [
 
       {
         id: 3,
-        name: "Chocolate Mousse",
+        name: "Mousse",
         imageUrl:
           "https://images.pexels.com/photos/3026810/pexels-photo-3026810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 10,
@@ -80,14 +80,14 @@ const BAKERY_DATA = [
     items: [
       {
         id: 10,
-        name: "Christmas Cookies",
+        name: "Xmas Cookies",
         imageUrl:
           "https://images.pexels.com/photos/5618032/pexels-photo-5618032.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 10,
       },
       {
         id: 11,
-        name: "Heartbaked Cookies",
+        name: "Heart Cookies",
         imageUrl:
           "https://images.pexels.com/photos/3553702/pexels-photo-3553702.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 12,
@@ -101,7 +101,7 @@ const BAKERY_DATA = [
       },
       {
         id: 13,
-        name: "St. Pattys Day Cookies",
+        name: "St. Pattys Cookies",
         imageUrl:
           "https://images.pexels.com/photos/3860487/pexels-photo-3860487.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price: 10,
