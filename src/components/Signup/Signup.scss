@@ -17,6 +17,7 @@
 
     @media screen and (max-width: 425px) {
       font-size: 1rem;
+      letter-spacing: -1px;
     }
   }
 
@@ -119,13 +120,13 @@
     font-size: 1.3rem;
     font-weight: bold;
     padding: 12px 45px;
-    letter-spacing: 1px;
     transition: transform 80ms ease-in;
     cursor: pointer;
 
     @media screen and (max-width: 425px) {
       font-size: 0.8rem;
       padding: 6px 20px;
+      letter-spacing: -1px;
     }
   }
 
