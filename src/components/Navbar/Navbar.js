@@ -48,7 +48,7 @@ const Navbar = ({ currentUser, hidden }) => {
         {hidden ? null : <CartDropdown />}
       </nav>
 
-      <ul className="sidenav" id="mobile-demo">
+      <ul className="sidenav sidenav-close" id="mobile-demo">
         <li>
           <Link to="/">Home</Link>
         </li>
