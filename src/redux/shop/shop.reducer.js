@@ -1,11 +1,16 @@
-import BAKERY_DATA from "./BakeryData";
+import { UPDATE_COLLECTIONS } from "./shop.types";
 
 const INITIAL_STATE = {
-  collections: BAKERY_DATA,
+  collections: null,
 };
 
 export const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case UPDATE_COLLECTIONS:
+      return {
+        ...state,
+        collections: action.payload,
+      };
     default:
       return state;
   }
