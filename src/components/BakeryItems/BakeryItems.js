@@ -4,30 +4,29 @@ import { createStructuredSelector } from "reselect";
 import CollectionPreview from "../CollectionPreview/CollectionPreview";
 import { selectCollectionsForPreview } from "../../redux/shop/shop.selectors";
 import {
-  firestore,
-  convertCollectionsSnapshotToMap,
-} from "../../firebase/firebase.utils";
-import { updateCollections } from "../../redux/shop/shop.actions";
+  fetchCollectionsStart,
+  updateCollections,
+} from "../../redux/shop/shop.actions";
 import Spinner from "../Spinner/Spinner";
+import { selectIsCollectionFetching } from "../../redux/shop/shop.selectors";
+import { fetchCollectionsStartAsync } from "../../redux/shop/shop.actions";
 import "./BakeryItems.scss";
 
-const BakeryItems = ({ collections, updateCollections }) => {
-  const [loading, setLoading] = useState(true);
+const BakeryItems = ({
+  collections,
+  fetchCollectionsStartAsync,
+  isCollectionFetching,
+}) => {
   useEffect(() => {
-    const collectionRef = firestore.collection("collections");
-    collectionRef.onSnapshot(async (snapshot) => {
-      const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-      updateCollections(collectionsMap);
-      setLoading(false);
-    });
+    fetchCollectionsStartAsync();
   }, []);
 
-  return loading ? (
+  return isCollectionFetching ? (
     <Spinner />
   ) : (
     <div className="BakeryItems">
       {collections.map(({ id, ...otherItemProps }) => (
-        <CollectionPreview isLoading={loading} key={id} {...otherItemProps} />
+        <CollectionPreview key={id} {...otherItemProps} />
       ))}
     </div>
   );
@@ -35,6 +34,9 @@ const BakeryItems = ({ collections, updateCollections }) => {
 
 const mapStateToProps = createStructuredSelector({
   collections: selectCollectionsForPreview,
+  isCollectionFetching: selectIsCollectionFetching,
 });
 
-export default connect(mapStateToProps, { updateCollections })(BakeryItems);
+export default connect(mapStateToProps, { fetchCollectionsStartAsync })(
+  BakeryItems
+);

@@ -2,7 +2,7 @@ import React from "react";
 import CollectionItem from "../CollectionItem/CollectionItem";
 import "./CollectionPreview.scss";
 
-const CollectionPreview = ({ isLoading, title, items }) => {
+const CollectionPreview = ({ title, items }) => {
   return (
     <div className="CollectionPreview">
       <h1 className="title animate__animated animate__slideInLeft">
