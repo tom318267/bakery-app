@@ -29,7 +29,7 @@ const CheckoutItem = ({ cartItem, clearItemFromCart, addItem, removeItem }) => {
         onClick={() => clearItemFromCart(cartItem)}
         className="remove-button"
       >
-        <i class="fas fa-trash"></i>
+        <i className="fas fa-trash"></i>
       </div>
     </div>
   );
